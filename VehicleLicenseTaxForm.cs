@@ -12,7 +12,8 @@ namespace Application_20210716
         private string[] _coachCC = new string[] { "600以下", "601-1200", "1201-1800", "1801-2400", "2401-3000 / 138HP以下(140.1PS以下)", "3001-3600", "3601-4200 / 138.1-200HP(140.2-203.0PS)", "4201-4800", "4801-5400 / 200.1-247HP(203.1-250.7PS)", "5401-6000", "6001-6600 / 247.1-286HP(250.8-290.3PS)", "6601-7200", "7201-7800 / 286.1-336HP(290.4-341.0PS)", "7801-8400", "8401-9000 / 336.1-361HP(341.1-366.4PS)", "9001-9600", "9601-10200 / 361.1HP以上(366.5PS以上)", "10201以上" };
         private string[] _privatePassengerCarCC = new string[] { "500以下 / 38HP以下(38.6PS以下)", "501~600 / 38.1-56HP(38.7-56.8PS)", "601~1200 / 56.1-83HP(56.9-84.2PS)", "1201~1800 / 83.1-182HP(84.3-184.7PS)", "1801~2400 / 182.1-262HP(184.8-265.9PS)", "2401~3000 / 262.1-322HP(266-326.8PS)", "3001-4200 / 322.1-414HP(326.9-420.2PS", "4201-5400 / 414.1-469HP(420.3-476.0PS)", "5401-6600 / 469.1-509HP(476.1-516.6PS)", "6601-7800 / 509.1HP以上(516.7PS以上)", "7801以上" };
         private string[] _commercialPassengerCarrCC = new string[] { "500以下 / 38HP以下(38.6PS以下)", "501~600 / 38.1-56HP(38.7-56.8PS)", "601~1200 / 56.1-83HP(56.9-84.2PS)", "1201~1800 / 83.1-182HP(84.3-184.7PS)", "1801~2400 / 182.1-262HP(184.8-265.9PS)", "2401~3000 / 262.1-322HP(266-326.8PS)", "3001-4200 / 322.1-414HP(326.9-420.2PS)", "4201-5400 / 414.1-469HP(420.3-476.0PS)", "5401-6600 / 469.1-509HP(476.1-516.6PS)", "6601-7800 / 509.1HP以上(516.7PS以上)", "7801以上" };
-        private string carType, displacement;
+        private string carType = string.Empty;
+        private string displacement = string.Empty;
         private int countingPerior, daysInYear;
         private decimal baseTax, totalResult;
         public VehicleLicenseTaxForm()
@@ -84,7 +85,7 @@ namespace Application_20210716
                 return;
             }
             // 清空之前的試算內容
-            this.txtResult.Text = "";
+            this.txtResult.Text = string.Empty;
             this.totalResult = 0;
             // 調整button位置
             this.btnCalculate.Location = (new Point(250, 530));
@@ -105,8 +106,8 @@ namespace Application_20210716
         private void Init()
         {
             // 數值初始化
-            carType = null;
-            displacement = null;
+            carType = string.Empty;
+            displacement = string.Empty;
             countingPerior = 0;
             daysInYear = 0;
             baseTax = 0;
