@@ -79,7 +79,7 @@ namespace Application_20210716
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             // 確定終止日不得早於起始日
-            if (dateTimePickerEnd.Value < dateTimePickerStart.Value)
+            if (this.dateTimePickerEnd.Value < this.dateTimePickerStart.Value)
             {
                 MessageBox.Show("終止日不得早於起始日", "日期錯誤", MessageBoxButtons.OK);
                 return;
@@ -162,18 +162,18 @@ namespace Application_20210716
                 userEndDate = dateTimePickerEnd.Value;
             }
 
-            for (int i = startYear; i <= endYear; i++)
+            for (int execYear = startYear; execYear <= endYear; execYear++)
             {
                 DateTime startDate;
                 DateTime endDate;
-                if (new DateTime(i, 1, 1) <= userStartDate)
+                if (new DateTime(execYear, 1, 1) <= userStartDate)
                 {
                     startDate = userStartDate;
-                    if (new DateTime(i, 12, 31) > userEndDate)
+                    if (new DateTime(execYear, 12, 31) > userEndDate)
                     {
                         endDate = userEndDate;
                         countingPerior = (endDate - startDate).Days + 1;
-                        daysInYear = new DateTime(i, 12, 31).DayOfYear;
+                        daysInYear = new DateTime(execYear, 12, 31).DayOfYear;
                         this.txtResult.Text += $"使用期間: {startDate.ToString("yyyy-MM-dd")} ~ {endDate.ToString("yyyy-MM-dd")} {Environment.NewLine}";
                         this.txtResult.Text += $"計算天數: {countingPerior} {Environment.NewLine}";
                         this.txtResult.Text += $"汽缸CC數: {displacement} {Environment.NewLine}";
@@ -184,9 +184,9 @@ namespace Application_20210716
                     }
                     else
                     {
-                        endDate = new DateTime(i, 12, 31);
+                        endDate = new DateTime(execYear, 12, 31);
                         countingPerior = (endDate - startDate).Days + 1;
-                        daysInYear = new DateTime(i, 12, 31).DayOfYear;
+                        daysInYear = new DateTime(execYear, 12, 31).DayOfYear;
                         this.txtResult.Text += $"使用期間: {startDate.ToString("yyyy-MM-dd")} ~ {endDate.ToString("yyyy-MM-dd")} {Environment.NewLine}";
                         this.txtResult.Text += $"計算天數: {countingPerior} {Environment.NewLine}";
                         this.txtResult.Text += $"汽缸CC數: {displacement} {Environment.NewLine}";
@@ -198,12 +198,12 @@ namespace Application_20210716
                 }
                 else
                 {
-                    startDate = new DateTime(i, 1, 1);
-                    if (new DateTime(i, 12, 31) > userEndDate)
+                    startDate = new DateTime(execYear, 1, 1);
+                    if (new DateTime(execYear, 12, 31) > userEndDate)
                     {
                         endDate = userEndDate;
                         countingPerior = (endDate - startDate).Days + 1;
-                        daysInYear = new DateTime(i, 12, 31).DayOfYear;
+                        daysInYear = new DateTime(execYear, 12, 31).DayOfYear;
                         this.txtResult.Text += $"使用期間: {startDate.ToString("yyyy-MM-dd")} ~ {endDate.ToString("yyyy-MM-dd")} {Environment.NewLine}";
                         this.txtResult.Text += $"計算天數: {countingPerior} {Environment.NewLine}";
                         this.txtResult.Text += $"汽缸CC數: {displacement} {Environment.NewLine}";
@@ -214,9 +214,9 @@ namespace Application_20210716
                     }
                     else
                     {
-                        endDate = new DateTime(i, 12, 31);
+                        endDate = new DateTime(execYear, 12, 31);
                         countingPerior = (endDate - startDate).Days + 1;
-                        daysInYear = new DateTime(i, 12, 31).DayOfYear;
+                        daysInYear = new DateTime(execYear, 12, 31).DayOfYear;
                         this.txtResult.Text += $"使用期間: {startDate.ToString("yyyy-MM-dd")} ~ {endDate.ToString("yyyy-MM-dd")} {Environment.NewLine}";
                         this.txtResult.Text += $"計算天數: {countingPerior} {Environment.NewLine}";
                         this.txtResult.Text += $"汽缸CC數: {displacement} {Environment.NewLine}";
