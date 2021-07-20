@@ -47,6 +47,7 @@ namespace Application_20210716
             this.btnCalculate = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.txtResult = new System.Windows.Forms.TextBox();
+            this.linkLabelRate = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,9 +67,9 @@ namespace Application_20210716
             this.label2.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label2.Location = new System.Drawing.Point(60, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(839, 60);
+            this.label2.Size = new System.Drawing.Size(839, 40);
             this.label2.TabIndex = 1;
-            this.label2.Text = "貼心小叮嚀：\r\n 1. 本表試算之稅額僅供參考之用，不做任何證明，實際應納稅額仍應以稽徵機關核定為準。 \r\n 2. 使用牌照稅稅額對照表及電動車應納稅額表\r\n";
+            this.label2.Text = "貼心小叮嚀：\r\n 1. 本表試算之稅額僅供參考之用，不做任何證明，實際應納稅額仍應以稽徵機關核定為準。 ";
             // 
             // label3
             // 
@@ -249,11 +250,26 @@ namespace Application_20210716
             this.txtResult.TabIndex = 12;
             this.txtResult.Visible = false;
             // 
-            // Form1
+            // linkLabelRate
+            // 
+            this.linkLabelRate.AutoSize = true;
+            this.linkLabelRate.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.linkLabelRate.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabelRate.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(126)))), ((int)(((byte)(138)))));
+            this.linkLabelRate.Location = new System.Drawing.Point(60, 136);
+            this.linkLabelRate.Name = "linkLabelRate";
+            this.linkLabelRate.Size = new System.Drawing.Size(429, 20);
+            this.linkLabelRate.TabIndex = 13;
+            this.linkLabelRate.TabStop = true;
+            this.linkLabelRate.Text = " 2. 使用牌照稅稅額對照表及電動車應納稅額表";
+            this.linkLabelRate.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRate_LinkClicked);
+            // 
+            // VehicleLicenseTaxForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1061, 752);
+            this.Controls.Add(this.linkLabelRate);
             this.Controls.Add(this.txtResult);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnCalculate);
@@ -267,7 +283,7 @@ namespace Application_20210716
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Form1";
+            this.Name = "VehicleLicenseTaxForm";
             this.Text = "使用牌照稅應納稅額試算";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
@@ -297,6 +313,7 @@ namespace Application_20210716
         private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.TextBox txtResult;
+        private System.Windows.Forms.LinkLabel linkLabelRate;
     }
 }
 

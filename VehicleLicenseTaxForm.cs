@@ -159,5 +159,20 @@ namespace Application_20210716
             this.btnCalculate.Location = (new Point(250, 350));
             this.btnReset.Location = (new Point(500, 350));
         }
+
+        // 超連結稅率網站
+        private void linkLabelRate_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+
+                linkLabelRate.LinkVisited = true;
+                System.Diagnostics.Process.Start("https://law-out.mof.gov.tw/LawContent.aspx?id=FL006130");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("超連結開啟失敗", "系統錯誤", MessageBoxButtons.OK);
+            }
+        }
     }
 }
