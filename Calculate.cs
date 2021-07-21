@@ -31,9 +31,9 @@ namespace Application_20210716
                         result += $"計算天數: {countingPerior} {Environment.NewLine}";
                         result += $"汽缸CC數: {displacement} {Environment.NewLine}";
                         result += $"用途: {carType} {Environment.NewLine}";
-                        result += $"計算公式: {baseTax} * {countingPerior} / {daysInYear} = {(Math.Floor(baseTax * countingPerior / daysInYear)).ToString("N0")} 元 {Environment.NewLine}";
-                        result += $"應納稅額: 共 {(Math.Floor(baseTax * countingPerior / daysInYear)).ToString("N0")} 元 {Environment.NewLine} {Environment.NewLine}";
-                        totalResult += Math.Floor(baseTax * countingPerior / daysInYear);
+                        result += $"計算公式: {baseTax} * {countingPerior} / {daysInYear} = {(Math.Truncate(baseTax * countingPerior / daysInYear)).ToString("N0")} 元 {Environment.NewLine}";
+                        result += $"應納稅額: 共 {(Math.Truncate(baseTax * countingPerior / daysInYear)).ToString("N0")} 元 {Environment.NewLine} {Environment.NewLine}";
+                        totalResult += Math.Truncate(baseTax * countingPerior / daysInYear);
                     }
                     else
                     {
@@ -44,9 +44,9 @@ namespace Application_20210716
                         result += $"計算天數: {countingPerior} {Environment.NewLine}";
                         result += $"汽缸CC數: {displacement} {Environment.NewLine}";
                         result += $"用途: {carType} {Environment.NewLine}";
-                        result += $"計算公式: {baseTax} * {countingPerior} / {daysInYear} = {(Math.Floor(baseTax * countingPerior / daysInYear)).ToString("N0")} 元 {Environment.NewLine}";
-                        result += $"應納稅額: 共 {(Math.Floor(baseTax * countingPerior / daysInYear)).ToString("N0")} 元 {Environment.NewLine} {Environment.NewLine}";
-                        totalResult += Math.Floor(baseTax * countingPerior / daysInYear);
+                        result += $"計算公式: {baseTax} * {countingPerior} / {daysInYear} = {(Math.Truncate(baseTax * countingPerior / daysInYear)).ToString("N0")} 元 {Environment.NewLine}";
+                        result += $"應納稅額: 共 {(Math.Truncate(baseTax * countingPerior / daysInYear)).ToString("N0")} 元 {Environment.NewLine} {Environment.NewLine}";
+                        totalResult += Math.Truncate(baseTax * countingPerior / daysInYear);
                     }
                 }
                 else
@@ -61,9 +61,9 @@ namespace Application_20210716
                         result += $"計算天數: {countingPerior} {Environment.NewLine}";
                         result += $"汽缸CC數: {displacement} {Environment.NewLine}";
                         result += $"用途: {carType} {Environment.NewLine}";
-                        result += $"計算公式: {baseTax} * {countingPerior} / {daysInYear} = {(Math.Floor(baseTax * countingPerior / daysInYear)).ToString("N0")} 元 {Environment.NewLine}";
-                        result += $"應納稅額: 共 {(Math.Floor(baseTax * countingPerior / daysInYear)).ToString("N0")} 元 {Environment.NewLine} {Environment.NewLine}";
-                        totalResult += Math.Floor(baseTax * countingPerior / daysInYear);
+                        result += $"計算公式: {baseTax} * {countingPerior} / {daysInYear} = {(Math.Truncate(baseTax * countingPerior / daysInYear)).ToString("N0")} 元 {Environment.NewLine}";
+                        result += $"應納稅額: 共 {(Math.Truncate(baseTax * countingPerior / daysInYear)).ToString("N0")} 元 {Environment.NewLine} {Environment.NewLine}";
+                        totalResult += Math.Truncate(baseTax * countingPerior / daysInYear);
                     }
                     else
                     {
@@ -74,9 +74,9 @@ namespace Application_20210716
                         result += $"計算天數: {countingPerior} {Environment.NewLine}";
                         result += $"汽缸CC數: {displacement} {Environment.NewLine}";
                         result += $"用途: {carType} {Environment.NewLine}";
-                        result += $"計算公式: {baseTax} * {countingPerior} / {daysInYear} = {(Math.Floor(baseTax * countingPerior / daysInYear)).ToString("N0")} 元 {Environment.NewLine}";
-                        result += $"應納稅額: 共 {(Math.Floor(baseTax * countingPerior / daysInYear)).ToString("N0")} 元 {Environment.NewLine} {Environment.NewLine}";
-                        totalResult += Math.Floor(baseTax * countingPerior / daysInYear);
+                        result += $"計算公式: {baseTax} * {countingPerior} / {daysInYear} = {(Math.Truncate(baseTax * countingPerior / daysInYear)).ToString("N0")} 元 {Environment.NewLine}";
+                        result += $"應納稅額: 共 {(Math.Truncate(baseTax * countingPerior / daysInYear)).ToString("N0")} 元 {Environment.NewLine} {Environment.NewLine}";
+                        totalResult += Math.Truncate(baseTax * countingPerior / daysInYear);
                     }
                 }
             }
